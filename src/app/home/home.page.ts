@@ -9,5 +9,14 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
-
+  usuario={
+    username:'',
+    password:''
+  }
+  ngOnInit() {
+  }
+    
+    onSubmit(){
+      console.log("works!!!!");
+    }
 }

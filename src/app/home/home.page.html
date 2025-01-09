@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title color="tertiary">
+      Comunidad felix
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-input label="Usuario" labelPlacement="floating" required type="text" name="usrname" [(ngModel)]="usuario.username" ></ion-input>
+  
+    </ion-item>
+    <ion-item>
+    
+      <ion-input label="Password" labelPlacement="floating" required type="password" name="pass" [(ngModel)]="usuario.password"  ></ion-input>
+    </ion-item>
+  
+      <ion-button expand="block" color="primary" type="submit" [disabled]="formulario.invalid">
+        Login
+      </ion-button>
+      <ion-button expand="block" color="primary" type="submit" [disabled]="formulario.invalid">
+        Registro
+      </ion-button>
+      <ion-button fill="clear">Recuperar Contraseña</ion-button>
+  </form>
   </div>
 </ion-content>

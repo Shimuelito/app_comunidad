@@ -1,0 +1,72 @@
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    height: 100%;
+  }
+  
+  /* Estilo del formulario */
+  .form-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Inputs y select */
+  ion-item {
+    margin-bottom: 15px;
+  }
+  
+  ion-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  ion-input,
+  ion-select,
+  
+  /* Botones */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    
+  }
+  
+  .custom-button {
+    --background: white;
+    --border-radius: 6px;
+    --color: #333;
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #333;
+    width: 48%; /* Ajusta los botones para que ocupen el ancho correcto */
+    text-align: center;
+  }
+  
+  .custom-button.volver:hover {
+    --background: #f4f4f4;
+  }
+  
+  .custom-button.enviar {
+    --background: #1f2579;
+    --color: white;
+  }
+  
+  .custom-button.enviar:hover {
+    --background: #968ac4;
+  }
+  ion-alert {
+    --width: 90%;
+    --max-width: 400px;
+    --border-radius: 10px;
+  }
+  

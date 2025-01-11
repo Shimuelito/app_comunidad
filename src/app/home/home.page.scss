@@ -25,3 +25,63 @@
 #container a {
   text-decoration: none;
 }
+/* Estilos generales */
+ion-header {
+  --background: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #eaeaea;
+}
+
+ion-toolbar {
+  --background: #272f77; /* Tono verde para "tertiary" */
+  --color: white;
+  font-weight: bold;
+}
+
+ion-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+ion-content {
+  --background: #f4f4f4;
+  padding: 20px;
+}
+
+/* Título adicional centrado */
+.titulo-principal {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color:#272f77;
+  margin-top: 10px; /* Espacio debajo del header */
+  margin-bottom: 20px; /* Espacio antes del contenido principal */
+}
+
+/* Estilo de la ventana */
+ion-list {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilo de los inputs */
+ion-item {
+  --background: #f9f9f9;
+  --padding-start: 0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+ion-input {
+  --placeholder-color: #aaa;
+  --color: #333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}

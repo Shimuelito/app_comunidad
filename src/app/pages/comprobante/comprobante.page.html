@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comprobante</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-list class="form-container">
+      <!-- Campo Nombre y Apellido -->
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input type="text" placeholder="Ingrese su nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Apellido</ion-label>
+        <ion-input type="text" placeholder="Ingrese su apellido"></ion-input>
+      </ion-item>
+
+      <!-- Campo Casa/Depto y Número -->
+      <ion-item>
+        <ion-label position="stacked">Casa/Depto</ion-label>
+        <ion-input type="text" placeholder="Ingrese casa/depto"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Número de casa o depto</ion-label>
+        <ion-input type="number" placeholder="000"></ion-input>
+      </ion-item>
+
+      <!-- Métodos de Pago -->
+      <ion-item>
+        <ion-label position="stacked">Métodos de pago</ion-label>
+        <ion-select placeholder="Seleccione un método">
+          <ion-select-option value="tarjeta">Tarjeta</ion-select-option>
+          <ion-select-option value="efectivo">Efectivo</ion-select-option>
+          <ion-select-option value="transferencia">Transferencia</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Comentarios -->
+      <ion-item>
+        <ion-label position="stacked">Comentarios</ion-label>
+        <ion-textarea placeholder="Ingrese sus comentarios"></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <!-- Botones Volver y Enviar -->
+    <div class="button-group">
+      <ion-button expand="block" class="custom-button volver" routerLink="/vista-arrendatario">Volver</ion-button>
+      <ion-button (click)="setOpen(true)">Enviar</ion-button>
+     <ion-alert
+       [isOpen]="isAlertOpen"
+       header="Comprobante enviado Correctamente"
+       [buttons]="alertButtons"
+       (didDismiss)="setOpen(false)"
+     ></ion-alert>
+    </div>
+  </div>
+</ion-content>

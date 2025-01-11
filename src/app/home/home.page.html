@@ -18,15 +18,16 @@
     </ion-item>
     <ion-item>
     
-      <ion-input label="Password" labelPlacement="floating" required type="password" name="pass" [(ngModel)]="usuario.password"  ></ion-input>
+      <ion-input label="Contraseña" labelPlacement="floating" required type="password" name="pass" [(ngModel)]="usuario.password"  ></ion-input>
     </ion-item>
   
-      <ion-button expand="block" color="primary" type="submit" [disabled]="formulario.invalid">
+      <ion-button expand="block" color="primary" type="submit" [disabled]="formulario.invalid" routerLink="/vista-arrendatario">
         Login
       </ion-button>
-      <ion-button expand="block" color="primary" type="submit" [disabled]="formulario.invalid">
-        Registro
-      </ion-button>
+       <!-- Botones Volver y Enviar -->
+    <div class="button-group">
+      <ion-button expand="block" class="custom-button volver" routerLink="/Registro">Registro</ion-button>
+    </div>
       <ion-button fill="clear">Recuperar Contraseña</ion-button>
   </form>
   </div>

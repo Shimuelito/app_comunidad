@@ -1,0 +1,40 @@
+/* Estilos para la pantalla principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #f4f4f4; /* Fondo claro */
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px; /* Espaciado inferior */
+    color: #333; /* Texto oscuro */
+  }
+  
+  /* Estilos para el grupo de botones */
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre botones */
+    width: 80%; /* Ajustar ancho de los botones */
+  }
+  
+  /* Botones personalizados */
+  .custom-button {
+    --background: white;
+    --border-radius: 6px;
+    --color: #333;
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border: 1px solid #333; /* Borde negro */
+  }
+  
+  .custom-button:hover {
+    --background: #f0f0f0;
+    --color: black;
+    --box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
+  }
+  

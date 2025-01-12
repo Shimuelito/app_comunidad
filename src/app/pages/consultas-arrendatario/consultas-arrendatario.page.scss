@@ -1,0 +1,123 @@
+/* Contenedor de la tabla */
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    overflow-x: auto; /* Permite desplazamiento horizontal en dispositivos pequeños */
+    padding: 10px;
+  }
+  
+  /* Tabla centrada con estilo */
+  .centered-table {
+    border-collapse: collapse;
+    width: 100%; /* Ocupa todo el espacio disponible */
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 14px; /* Escala la fuente en dispositivos pequeños */
+  }
+  
+  /* Encabezados de la tabla */
+  .centered-table th {
+    background-color: #0078d7; /* Color primario */
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  /* Filas de la tabla */
+  .centered-table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  /* Colores alternos para filas */
+  .centered-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Última fila sin borde */
+  .centered-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Hover en filas */
+  .centered-table tr:hover {
+    background-color: #eaf4fc;
+  }
+  
+  /* Botones */
+  .actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Acomoda los botones en filas si el espacio es reducido */
+    gap: 15px;
+  }
+  
+  .actions ion-button {
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .actions ion-button:hover {
+    --background-hover: #005a9e;
+  }
+  
+  /* Diseño responsivo para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .centered-table th,
+    .centered-table td {
+      font-size: 12px; /* Ajusta el tamaño de la fuente */
+      padding: 8px; /* Reduce el espacio en las celdas */
+    }
+    .table-container {
+      padding: 5px; /* Reduce el margen en pantallas pequeñas */
+    }
+  }
+  
+  /* Alternativa para convertir la tabla en lista en móviles */
+  @media (max-width: 480px) {
+    .centered-table {
+      display: block; /* Cambia a diseño de lista */
+      border: none;
+    }
+  
+    .centered-table thead {
+      display: none; /* Oculta el encabezado */
+    }
+  
+    .centered-table tr {
+      display: block;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  
+    .centered-table td {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      padding: 8px 5px;
+    }
+  
+    .centered-table td:before {
+      content: attr(data-label); /* Usa el atributo data-label para mostrar encabezados */
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #555;
+    }
+  }
+  

@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'consultas-arrendatario',
     loadChildren: () => import('./pages/consultas-arrendatario/consultas-arrendatario.module').then( m => m.ConsultasArrendatarioPageModule)
   },
+  {
+    path: 'vista-administrador',
+    loadChildren: () => import('./pages/vista-administrador/vista-administrador.module').then( m => m.VistaAdministradorPageModule)
+  },
 
 
 ];

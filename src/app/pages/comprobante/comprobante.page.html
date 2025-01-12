@@ -46,8 +46,8 @@
 
     <!-- Botones Volver y Enviar -->
     <div class="button-group">
-      <ion-button expand="block" class="custom-button volver" routerLink="/vista-arrendatario">Volver</ion-button>
-      <ion-button (click)="setOpen(true)">Enviar</ion-button>
+      <ion-button routerLink="/vista-arrendatario" shape="round">Volver al inicio</ion-button>     
+      <ion-button (click)="setOpen(true)" shape="round">Enviar</ion-button>
      <ion-alert
        [isOpen]="isAlertOpen"
        header="Comprobante enviado Correctamente"

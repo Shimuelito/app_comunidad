@@ -1,0 +1,31 @@
+
+  ion-card {
+    margin: 10px;
+  }
+
+  ion-item {
+    --background: #596674;
+    border: 1px solid #0a0a0a;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  ion-label h2 {
+    font-size: 1.2em;
+    font-weight: bolder ;
+    color: #0a0a0a;
+  }
+  ion-label p {
+    color: black;
+    font-size: 1.05em;
+  }
+
+  .actions {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  ion-footer {
+    --background: #f0f0f0;
+  }
+  

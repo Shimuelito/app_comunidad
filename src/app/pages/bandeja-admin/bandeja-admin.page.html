@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bandeja de entrada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-label>Filtrar por:</ion-label>
+      <ion-select multiple="true" placeholder="Seleccionar filtros" [(ngModel)]="filters">
+        <ion-select-option value="fecha">Fecha</ion-select-option>
+        <ion-select-option value="recibidos">Recibidos</ion-select-option>
+        <ion-select-option value="enviados">Enviados</ion-select-option>
+        <ion-select-option value="depto">Depto</ion-select-option>
+      </ion-select>
+      <ion-button expand="block" fill="solid" (click)="clearFilters()">Limpiar</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-label>
+        <h2>Nombre: {{ item.nombre }}</h2>
+        <p>Fecha: {{ item.fecha }}</p>
+        <p>Comprobante: {{ item.comprobante }}</p>
+        <p>Depto: {{ item.depto }}</p>
+      </ion-label>
+      <ion-button fill="solid" (click)="verDetalle(item) " routerLink="/detalle-admin">Ver Detalle</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div class="actions">
+    <ion-button expand="block" (click)="actualizar()">
+      <ion-icon name="arrow-down-outline"></ion-icon>
+      Actualizar
+    </ion-button>
+  </div>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="block" fill="outline" routerLink="/vista-administrador">Volver</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

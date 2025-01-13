@@ -1,0 +1,34 @@
+ion-card {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(73, 35, 35, 0.1);
+  }
+
+  ion-card-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  ion-card-content p {
+    font-size: 1.2em;
+    color: rgb(223, 215, 215);
+    margin: 5px 0;
+  }
+
+  ion-item {
+    --background: #495494;
+    border: 1px solid #faf7f7;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+
+  .actions {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  ion-footer {
+    --background: #294f75;
+  }

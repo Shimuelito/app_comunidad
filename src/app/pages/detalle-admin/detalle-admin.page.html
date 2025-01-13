@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle Comprobantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nombre: Jorge</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Depto: 90</p>
+      <p>Comprobante: Recibido</p>
+      <p>Método de pago: Transferencia</p>
+      <ion-item>
+        <ion-label>Estado</ion-label>
+        <ion-radio-group [(ngModel)]="estado">
+          <ion-item>
+            <ion-label>Aprobado</ion-label>
+            <ion-radio slot="start" value="aprobado"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Rechazado</ion-label>
+            <ion-radio slot="start" value="rechazado"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Motivo/Comentario</ion-label>
+        <ion-textarea placeholder="Ingrese un comentario..." [(ngModel)]="comentario"></ion-textarea>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="actions">
+    <ion-button expand="block" fill="outline" routerLink="/bandeja-admin">Volver a recibos</ion-button>
+    <ion-button expand="block" (click)="enviar()">Enviar</ion-button>
+  </div>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="block" fill="outline" routerLink="/vista-administrador">Volver</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

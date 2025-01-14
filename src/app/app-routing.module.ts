@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'detalle-admin',
     loadChildren: () => import('./pages/detalle-admin/detalle-admin.module').then( m => m.DetalleAdminPageModule)
   },
+  {
+    path: 'historial-admin',
+    loadChildren: () => import('./pages/historial-admin/historial-admin.module').then( m => m.HistorialAdminPageModule)
+  },
 
 
 ];

@@ -1,0 +1,39 @@
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .table {
+    border: 1px solid #6e6161;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .header {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .data {
+    text-align: center;
+    border-bottom: 1px solid #756b6b;
+  }
+  
+  .data:last-child {
+    border-bottom: none;
+  }
+  
+  .data ion-col {
+    padding: 8px 4px;
+  }
+  
+  .header ion-col {
+    padding: 10px 5px;
+  }
+  
+  ion-item {
+    margin-bottom: 15px;
+  }

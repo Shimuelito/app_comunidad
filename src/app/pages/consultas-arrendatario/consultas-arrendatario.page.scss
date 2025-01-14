@@ -7,26 +7,11 @@
     overflow-x: auto; /* Permite desplazamiento horizontal en dispositivos pequeños */
     padding: 10px;
   }
-  
-  /* Tabla centrada con estilo */
-  .centered-table {
-    border-collapse: collapse;
-    width: 100%; /* Ocupa todo el espacio disponible */
-    max-width: 800px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    font-size: 14px; /* Escala la fuente en dispositivos pequeños */
-  }
-  
+
   /* Encabezados de la tabla */
   .centered-table th {
-    background-color: #0078d7; /* Color primario */
-    color: #ffffff;
+    
+    color: #232121;
     font-weight: bold;
     padding: 12px;
     text-align: center;
@@ -39,7 +24,7 @@
     padding: 12px;
     text-align: center;
     font-size: 14px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #bfa5a5;
   }
   
   /* Colores alternos para filas */
@@ -47,10 +32,6 @@
     background-color: #f9f9f9;
   }
   
-  /* Última fila sin borde */
-  .centered-table tr:last-child td {
-    border-bottom: none;
-  }
   
   /* Hover en filas */
   .centered-table tr:hover {
@@ -66,16 +47,6 @@
     gap: 15px;
   }
   
-  .actions ion-button {
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .actions ion-button:hover {
-    --background-hover: #005a9e;
-  }
   
   /* Diseño responsivo para pantallas pequeñas */
   @media (max-width: 600px) {
@@ -103,7 +74,7 @@
     .centered-table tr {
       display: block;
       margin-bottom: 10px;
-      border-bottom: 1px solid #e0e0e0;
+      border-bottom: 1px solid #2d2626;
     }
   
     .centered-table td {

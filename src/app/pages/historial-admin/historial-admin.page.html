@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Historial Administrador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Filtros -->
+    <ion-item>
+      <ion-label>Filtrar por Departamento</ion-label>
+      <ion-select [(ngModel)]="selectedDepto" (ionChange)="filterList()">
+        <ion-select-option *ngFor="let depto of deptos" [value]="depto">
+          {{ depto }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Filtrar por Estado</ion-label>
+      <ion-select [(ngModel)]="selectedEstado" (ionChange)="filterList()">
+        <ion-select-option *ngFor="let estado of estados" [value]="estado">
+          {{ estado }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Lista del historial -->
+    <ion-list-header>
+      <ion-label>Resultados</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let item of filteredHistorial">
+      <ion-label>
+        <h2>Fecha: {{ item.fecha }}</h2>
+        <p>Depto: {{ item.depto }} - Nombre: {{ item.nombre }}</p>
+        <p>Estado: {{ item.estado }}</p>
+        <p>Comentario: {{ item.comentario }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/vista-administrador">
+        <ion-icon name="arrow-back"></ion-icon> Volver
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

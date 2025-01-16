@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router'; 
-import { ReactiveFormsModule } from '@angular/forms';
-
+import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
@@ -13,7 +12,7 @@ export class RegistroPage implements OnInit {
 
   registroForm!: FormGroup;
   
-  constructor(private fb: FormBuilder ,private router: Router) {}
+  constructor(private fb: FormBuilder ,private router: Router, ) {}
   isAlertOpen = false;
   alertButtons = [
     {
@@ -40,6 +39,7 @@ export class RegistroPage implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
+      username: ['', [Validators.required]] 
     }, { validator: this.passwordMatchValidator });
   }
   passwordMatchValidator(form: FormGroup) {
@@ -50,7 +50,12 @@ export class RegistroPage implements OnInit {
   onSubmit() {
     if (this.registroForm.valid) {
       console.log('Formulario válido:', this.registroForm.value);
-      this.router.navigate(['/home']); // Redirige a la página principal
+
+      // Limpiar los campos después de registrar
+      this.registroForm.reset();
+
+      // Redirigir al home o mostrar un mensaje de éxito
+      this.router.navigate(['/home']);  // Redirige a la página principal
     } else {
       console.log('Formulario inválido');
     }

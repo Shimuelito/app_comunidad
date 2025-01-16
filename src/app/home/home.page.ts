@@ -22,7 +22,7 @@ export class HomePage {
     if (this.usuario.username === 'admin' && this.usuario.password === '123456') {
       console.log('Administrador - Redirigiendo a la vista de administrador');
       this.router.navigate(['/vista-administrador']);  // Redirigir al administrador
-    } else if (this.usuario.username === 'Samuel' && this.usuario.password === '123') {
+    } else if (this.usuario.username && this.usuario.password) {
       console.log('Usuario común - Redirigiendo a la vista de arrendatario');
       this.router.navigate(['/vista-arrendatario']);  // Redirigir a vista arrendatario
     } else {

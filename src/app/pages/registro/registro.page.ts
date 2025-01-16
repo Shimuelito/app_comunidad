@@ -12,7 +12,7 @@ export class RegistroPage implements OnInit {
 
   registroForm!: FormGroup;
   
-  constructor(private fb: FormBuilder ,private router: Router, ) {}
+  constructor(private fb: FormBuilder ,private router: Router, private userService: UserService) {}
   isAlertOpen = false;
   alertButtons = [
     {
@@ -50,10 +50,13 @@ export class RegistroPage implements OnInit {
   onSubmit() {
     if (this.registroForm.valid) {
       console.log('Formulario válido:', this.registroForm.value);
-
+  
+      // Guardar usuario en el servicio
+      this.userService.saveUser(this.registroForm.value);  // Aquí se usa el servicio para guardar al usuario
+  
       // Limpiar los campos después de registrar
       this.registroForm.reset();
-
+  
       // Redirigir al home o mostrar un mensaje de éxito
       this.router.navigate(['/home']);  // Redirige a la página principal
     } else {

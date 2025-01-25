@@ -1,64 +1,83 @@
 <ion-header>
   <ion-toolbar color="tertiary">
     <ion-buttons>
-      <ion-back-button slot="primary" text="Volver" defaultHref="/"></ion-back-button> 
+      <ion-back-button slot="primary" text="Volver" defaultHref="/"></ion-back-button>
       <ion-title>Registro</ion-title>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
-    <!-- Campo Nombre -->
+  <form [formGroup]="registroForm" (ngSubmit)="onRegister()">
     <ion-item>
-      <ion-input label="Nombre" labelPlacement="floating" required type="text" formControlName="nombre"></ion-input>
+      <ion-input
+        label="Nombre"
+        labelPlacement="floating"
+        type="text"
+        formControlName="nombre"
+        required
+      ></ion-input>
     </ion-item>
-    <div *ngIf="registroForm.get('nombre')?.invalid && registroForm.get('nombre')?.touched" class="error-message">
-      Formato inválido
-    </div>
 
-    <!-- Campo Número Casa -->
     <ion-item>
-      <ion-input label="Número Casa" labelPlacement="floating" required type="text" formControlName="numeroCasa"></ion-input>
+      <ion-input
+        label="Número Casa"
+        labelPlacement="floating"
+        type="text"
+        formControlName="numeroCasa"
+        required
+      ></ion-input>
     </ion-item>
-    <div *ngIf="registroForm.get('numeroCasa')?.invalid && registroForm.get('numeroCasa')?.touched" class="error-message">
-      Formato inválido
-    </div>
 
-    <!-- Campo Correo Electrónico -->
     <ion-item>
-      <ion-input label="Correo Electrónico" labelPlacement="floating" required type="email" formControlName="email"></ion-input>
+      <ion-input
+        label="Correo Electrónico"
+        labelPlacement="floating"
+        type="email"
+        formControlName="email"
+        required
+      ></ion-input>
     </ion-item>
-    <div *ngIf="registroForm.get('email')?.invalid && registroForm.get('email')?.touched" class="error-message">
-      Formato inválido
-    </div>
 
-    <!-- Campo Nombre de Usuario -->
     <ion-item>
-      <ion-input label="Nombre de Usuario" labelPlacement="floating" required type="text" formControlName="username"></ion-input>
+      <ion-input
+        label="Nombre de Usuario"
+        labelPlacement="floating"
+        type="text"
+        formControlName="username"
+        required
+      ></ion-input>
     </ion-item>
-    <div *ngIf="registroForm.get('username')?.invalid && registroForm.get('username')?.touched" class="error-message">
-      Formato inválido
-    </div>
 
-    <!-- Campo Contraseña -->
     <ion-item>
-      <ion-input label="Contraseña" labelPlacement="floating" required type="password" formControlName="password"></ion-input>
+      <ion-input
+        label="Contraseña"
+        labelPlacement="floating"
+        type="password"
+        formControlName="password"
+        required
+      ></ion-input>
     </ion-item>
-    <div *ngIf="registroForm.get('password')?.invalid && registroForm.get('password')?.touched" class="error-message">
-      Formato inválido
-    </div>
 
-    <!-- Campo Confirmar Contraseña -->
     <ion-item>
-      <ion-input label="Confirmar Contraseña" labelPlacement="floating" required type="password" formControlName="confirmPassword"></ion-input>
+      <ion-input
+        label="Confirmar Contraseña"
+        labelPlacement="floating"
+        type="password"
+        formControlName="confirmPassword"
+        required
+      ></ion-input>
     </ion-item>
-    <div *ngIf="registroForm.get('confirmPassword')?.invalid && registroForm.get('confirmPassword')?.touched" class="error-message">
-      Formato inválido
-    </div>
 
     <ion-button expand="block" color="primary" type="submit" [disabled]="registroForm.invalid">
       Registrar
     </ion-button>
   </form>
+
+  <!-- Alerta -->
+  <ion-alert
+    [isOpen]="isAlertOpen"
+    [header]="alertMessage"
+    [buttons]="alertButtons"
+  ></ion-alert>
 </ion-content>

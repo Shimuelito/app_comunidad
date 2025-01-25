@@ -1,30 +1,44 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title color="tertiary">
-      Comunidad felix
+      Comunidad Felix
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  </ion-header>
-
   <div id="container">
-    <form #formulario="ngForm" (ngSubmit)="onSubmit()">
-    <ion-item>
-      <ion-input label="Usuario" labelPlacement="floating" required type="text" name="usrname" [(ngModel)]="usuario.username"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Contraseña" labelPlacement="floating" required type="password" name="pass" [(ngModel)]="usuario.password"></ion-input>
-    </ion-item>
-    <ion-button expand="block" color="primary" type="submit" [disabled]="formulario.invalid">
-      Login
-    </ion-button>
-    <div class="button-group">
-      <ion-button expand="block" class="custom-button volver" routerLink="/Registro">Registro</ion-button>
-    </div>
-    <ion-button fill="clear">Recuperar Contraseña</ion-button>
-  </form>
+    <form #formulario="ngForm" (ngSubmit)="login()">
+      <!-- Campo Usuario -->
+      <ion-item>
+        <ion-input
+          label="Usuario"
+          labelPlacement="floating"
+          required
+          type="text"
+          name="usrname"
+          [(ngModel)]="usuario.username"
+        ></ion-input>
+      </ion-item>
+      <!-- Campo Contraseña -->
+      <ion-item>
+        <ion-input
+          label="Contraseña"
+          labelPlacement="floating"
+          required
+          type="password"
+          name="pass"
+          [(ngModel)]="usuario.password"
+        ></ion-input>
+      </ion-item>
+      <!-- Botón Login -->
+      <ion-button expand="block" color="primary" type="submit" [disabled]="formulario.invalid">
+        Login
+      </ion-button>
+      <div class="button-group">
+        <ion-button expand="block" class="custom-button volver" routerLink="/Registro">Registro</ion-button>
+      </div>
+      <ion-button fill="clear">Recuperar Contraseña</ion-button>
+    </form>
   </div>
 </ion-content>

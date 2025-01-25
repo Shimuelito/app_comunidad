@@ -6,30 +6,28 @@
 
 <ion-content>
   <div class="table-container">
-    <table class="centered-table">
-      <thead>
-        <tr>
-          <th>Fecha</th>
-          <th>Depto</th>
-          <th>Nombre</th>
-          <th>Estado</th>
-          <th>Comentario</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of tableData">
-          <td data-label="Fecha">{{ item.fecha }}</td>
-          <td data-label="Depto">{{ item.depto }}</td>
-          <td data-label="Nombre">{{ item.nombre }}</td>
-          <td data-label="Estado">{{ item.estado }}</td>
-          <td data-label="Comentario">{{ item.comentario }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <!-- Lista de consultas con ion-card -->
+    <ion-card *ngFor="let item of tableData">
+      <ion-card-header>
+        <ion-card-title>Consulta de {{ item.nombre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="consulta-details">
+          <p><strong>Fecha:</strong> {{ item.fecha }}</p>
+          <p><strong>Depto:</strong> {{ item.depto }}</p>
+          <p><strong>Estado:</strong> {{ item.estado }}</p>
+          <p><strong>Comentario:</strong> {{ item.comentario }}</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
   </div>
-  
+
+  <!-- Botones de acción -->
   <div class="actions">
     <ion-button color="primary" (click)="clearTable()" shape="round">Limpiar</ion-button>
     <ion-button routerLink="/vista-arrendatario" shape="round">Volver al inicio</ion-button>
+
+    <!-- Botón de actualizar -->
+    <ion-button color="secondary" (click)="updateTable()" shape="round">Actualizar</ion-button>
   </div>  
 </ion-content>

@@ -7,7 +7,11 @@
     background-color: #f4f4f4;
     height: 100%;
   }
-  
+  /* Agregar estilo para cambiar el color del texto del nombre */
+.nombre-input {
+  color: white;  /* Cambia el color del texto a blanco */
+  --padding-start: 0; /* Opcional, para ajustar el padding del input */
+}
   /* Estilo del formulario */
   .form-container {
     background: white;
@@ -26,11 +30,8 @@
   ion-label {
     font-size: 14px;
     font-weight: bold;
-    color: #333;
+    color: #fafafa;
   }
-  
-  ion-input,
-  ion-select,
   
   /* Botones */
   .button-group {

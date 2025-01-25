@@ -6,11 +6,12 @@
 
 <ion-content>
   <div class="container">
-    <h2>Hola.. (nombre us)</h2>
+    <h2>Hola, {{ usuario?.username || 'Usuario' }}</h2> <!-- Muestra el nombre de usuario almacenado -->
+    
     <div class="button-group">
       <ion-button expand="block" class="custom-button" routerLink="/consultas-arrendatario">Consultar</ion-button>
       <ion-button expand="block" class="custom-button" routerLink="/comprobante">Enviar comprobante</ion-button>
-      <ion-button expand="defautl" fill="outline" shape="round" routerLink="/home"> Cerrar session </ion-button>
+      <ion-button expand="default" fill="outline" shape="round" (click)="logout()">Cerrar sesión</ion-button> <!-- Cerrar sesión -->
     </div>
   </div>
 </ion-content>
